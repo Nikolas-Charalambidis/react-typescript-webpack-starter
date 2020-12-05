@@ -12,7 +12,7 @@
     "build": "webpack",
     "dev": "webpack-dev-server --open",
     "build:dev": "cross-env NODE_ENV=development webpack",
-    "build:prod": "cross-env NODE_ENV=production ROOT=\"/react-typescript-webpack-starter webpack\"",
+    "build:prod": "cross-env NODE_ENV=production ROOT=\"/react-typescript-webpack-starter\" webpack",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
