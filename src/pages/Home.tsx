@@ -24,9 +24,8 @@ export default class About extends React.Component<IPage> {
           </div>
         </div>
         <hr/>
-        <p>{process.env.BASENAME}</p>
-        <hr/>
-        <p>{process.env}</p>
+        <h3>Environment variable</h3>
+          <p>process.env.BASENAME={process.env.BASENAME}</p>
       </React.Fragment>
     );
   }

@@ -10,7 +10,7 @@
     "prettier": "prettier --write \"src/**/*.{ts,tsx,scss,sass}\"",
     "prettier:check": "prettier --list-different \"src/**/*.{ts,tsx,scss,sass}\"",
     "build": "webpack",
-    "dev": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --env.ENVIRONMENT=development --open",
     "build:dev": "webpack --env.ENVIRONMENT=development",
     "build:prod": "webpack --env.ENVIRONMENT=production",
     "deploy": "gh-pages -d build"
