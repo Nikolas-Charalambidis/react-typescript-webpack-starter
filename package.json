@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "author": "Nikolas Charalambidis",
   "license": "MIT",
-  "homepage": "http://nikolas-charalambidis.github.io/react-typescript-webpack-starter",
   "private": true,
   "scripts": {
     "analyze": "cross-env NODE_ENV=production ANALYZE=true webpack",
