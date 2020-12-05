@@ -11,14 +11,13 @@
     "prettier:check": "prettier --list-different \"src/**/*.{ts,tsx,scss,sass}\"",
     "build": "webpack",
     "dev": "webpack-dev-server --open",
-    "build:dev": "webpack --env.ENVIRONMENT=development",
-    "build:prod": "webpack --env.ENVIRONMENT=production",
+    "build:dev": "webpack --env ENVIRONMENT=development",
+    "build:prod": "webpack --env ENVIRONMENT=production",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.1.6",
     "@types/react-router-hash-link": "^1.2.1",
-    "cross-env": "^7.0.3",
     "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

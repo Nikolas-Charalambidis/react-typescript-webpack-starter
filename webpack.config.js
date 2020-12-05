@@ -2,14 +2,17 @@ const path = require("path");
 const webpack = require("webpack");
 
 const fs = require('fs'); // to check if the file exists
+const DotEnv = require('dotenv-webpack');
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer/lib/BundleAnalyzerPlugin");
-const DotEnv = require('dotenv');
 
 module.exports = (env) => {
+
+    const isProd = env.ENVIRONMENT === "production";
+    const analyzeBundle = process.env.ANALYZE === "true";
 
     const currentPath = path.join(__dirname);
     const basePath = currentPath + '/.env';
@@ -17,8 +20,6 @@ module.exports = (env) => {
     const finalPath = fs.existsSync(envPath) ? envPath : basePath;
     const fileEnv = DotEnv.config({ path: finalPath }).parsed;
 
-    const isProd = env.ENVIRONMENT === "production";
-    const analyzeBundle = process.env.ANALYZE === "true";
 
     // reduce it to a nice object, the same as before (but with the variables from the file)
     const envKeys = Object.keys(fileEnv).reduce((prev, next) => {
