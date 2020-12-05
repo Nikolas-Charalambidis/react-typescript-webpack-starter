@@ -23,6 +23,10 @@ export default class About extends React.Component<IPage> {
             </ul>
           </div>
         </div>
+        <hr/>
+        <p>{process.env.BASENAME}</p>
+        <hr/>
+        <p>{process.env}</p>
       </React.Fragment>
     );
   }

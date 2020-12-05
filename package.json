@@ -11,8 +11,8 @@
     "prettier:check": "prettier --list-different \"src/**/*.{ts,tsx,scss,sass}\"",
     "build": "webpack",
     "dev": "webpack-dev-server --open",
-    "build:dev": "cross-env NODE_ENV=development webpack",
-    "build:prod": "cross-env NODE_ENV=production ROOT=\"/react-typescript-webpack-starter\" webpack",
+    "build:dev": "webpack --env.ENVIRONMENT=development",
+    "build:prod": "webpack --env.ENVIRONMENT=production",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
     "css-loader": "^5.0.1",
+    "dotenv": "^8.2.0",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-react": "^7.21.5",
