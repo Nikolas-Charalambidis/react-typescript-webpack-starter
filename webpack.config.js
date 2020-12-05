@@ -11,13 +11,22 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer/lib/BundleAnalyzer
 
 module.exports = (env) => {
 
+    console.log("env", env);
+    console.log("process.env", process.env);
+
     const isProd = env.ENVIRONMENT === "production";
+
+    console.log("env.ENVIRONMENT", env.ENVIRONMENT);
+
     const analyzeBundle = process.env.ANALYZE === "true";
 
     const currentPath = path.join(__dirname);
     const basePath = currentPath + '/.env';
     const envPath = basePath + '.' + env.ENVIRONMENT;
     const finalPath = fs.existsSync(envPath) ? envPath : basePath;
+
+    console.log("finalPath", finalPath);
+
     const fileEnv = DotEnv.config({ path: finalPath }).parsed;
 
 
