@@ -10,7 +10,7 @@ export default class App extends React.Component<IPage> {
   public render() {
     return (
 
-        <Router basename={process.env.ROOT}>
+        <Router basename={"/react-typescript-webpack-starter"}>
           <Switch>
             <Route exact path="/">
               <Home label={"home"} />
