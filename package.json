@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "analyze": "cross-env NODE_ENV=production ANALYZE=true webpack",
+    "analyze": "webpack --env.ENVIRONMENT=production-analyze",
     "lint": "eslint --max-warnings 0 --ext .js \"src/**/*.{ts,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{ts,tsx,scss,sass}\"",
     "prettier:check": "prettier --list-different \"src/**/*.{ts,tsx,scss,sass}\"",

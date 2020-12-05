@@ -5,12 +5,13 @@ import About from "./pages/About";
 import Contacts from "./pages/Contacts";
 import IPage from "./pages/IPage";
 import Home from "./pages/Home";
+import ErrorPage from "./pages/ErrorPage";
 
 export default class App extends React.Component<IPage> {
   public render() {
     return (
 
-        <Router basename={"/react-typescript-webpack-starter"}>
+        <Router basename={process.env.BASENAME}>
           <Switch>
             <Route exact path="/">
               <Home label={"home"} />
@@ -21,9 +22,11 @@ export default class App extends React.Component<IPage> {
             <Route exact path="/dashboard">
               <Contacts label={"contacts"} />
             </Route>
+            <Route>
+              <ErrorPage label={"404"} />
+            </Route>
           </Switch>
         </Router>
-
     );
   }
 }
