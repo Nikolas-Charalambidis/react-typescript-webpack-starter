@@ -9,21 +9,21 @@ import Home from "./pages/Home";
 export default class App extends React.Component<IPage> {
   public render() {
     return (
-      <React.Fragment>
+
         <Router basename={process.env.PUBLIC_URL}>
           <Switch>
-            <Route exact path={"/"}>
+            <Route exact path="/">
               <Home label={"home"} />
             </Route>
-            <Route path="/about">
+            <Route exact path="/about">
               <About label={"about"} />
             </Route>
-            <Route path="/dashboard">
+            <Route exact path="/dashboard">
               <Contacts label={"contacts"} />
             </Route>
           </Switch>
         </Router>
-      </React.Fragment>
+
     );
   }
 }
