@@ -9,6 +9,7 @@ cache:
 
 script:
   - yarn build:prod
+  - env
 
 deploy:
   - provider: pages
