@@ -11,9 +11,6 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer/lib/BundleAnalyzer
 
 module.exports = (env) => {
 
-    console.log("env", env);
-    console.log("process.env", process.env);
-
     const isProd = env.ENVIRONMENT === "production";
 
     console.log("env.ENVIRONMENT", env.ENVIRONMENT);
@@ -24,14 +21,14 @@ module.exports = (env) => {
     const basePath = currentPath + '/.env';
     const envPath = basePath + '.' + env.ENVIRONMENT;
     const finalPath = fs.existsSync(envPath) ? envPath : basePath;
-
-    console.log("finalPath", finalPath);
-
     const fileEnv = DotEnv.config({ path: finalPath }).parsed;
 
+    console.log("fileEnv", fileEnv);
 
     // reduce it to a nice object, the same as before (but with the variables from the file)
     const envKeys = Object.keys(fileEnv).reduce((prev, next) => {
+        console.log(" --nextName", `process.env.${next}`);
+        console.log(" --nextEnv ", fileEnv[next])
         prev[`process.env.${next}`] = JSON.stringify(fileEnv[next]);
         return prev;
     }, {});
