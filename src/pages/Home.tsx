@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import IPage from "./IPage";
-import { Link } from "react-router-dom";
+import {HashLink as Link} from 'react-router-hash-link';
 
 export default class About extends React.Component<IPage> {
   public render() {

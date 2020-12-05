@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import IPage from "./IPage";
-import { Link } from "react-router-dom";
+import {HashLink as Link} from 'react-router-hash-link';
 
 const About: React.FunctionComponent<IPage> = ({ label }) => {
   return (
