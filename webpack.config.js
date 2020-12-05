@@ -2,7 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 
 const fs = require('fs'); // to check if the file exists
-const DotEnv = require('dotenv-webpack');
+const DotEnv = require('dotenv');
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
