@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./App.scss";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./pages/About";
 import Contacts from "./pages/Contacts";
 import IPage from "./pages/IPage";
