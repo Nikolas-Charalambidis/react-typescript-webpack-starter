@@ -4,7 +4,6 @@
   "author": "Nikolas Charalambidis",
   "license": "MIT",
   "private": true,
-  "homepage": "http://nikolas-charalambidis.github.io/react-typescript-webpack-starter",
   "scripts": {
     "analyze": "cross-env NODE_ENV=production ANALYZE=true webpack",
     "lint": "eslint --max-warnings 0 --ext .js \"src/**/*.{ts,tsx}\"",
