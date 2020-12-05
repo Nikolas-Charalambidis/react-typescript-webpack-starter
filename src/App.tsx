@@ -10,7 +10,7 @@ export default class App extends React.Component<IPage> {
   public render() {
     return (
 
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router basename={process.env.ROOT}>
           <Switch>
             <Route exact path="/">
               <Home label={"home"} />
