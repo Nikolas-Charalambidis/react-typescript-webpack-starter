@@ -11,15 +11,15 @@ export default class Home extends React.Component<IPage> {
           <div>
             <ul>
               <li>
-                <a href="/">Home</a>
+                  <a href={`${process.env.BASEPATH}`}>Home</a>
               </li>
               <li>
-                <a href="/about">About</a>
+                  <a href={`${process.env.BASEPATH}/about`}>About</a>
               </li>
               <li>
-                <a href="/contacts">Contacts</a>
-              </li>
-            </ul>
+                <a href={`${process.env.BASEPATH}/contacts`}>Contacts</a>
+            </li>
+          </ul>
           </div>
         </div>
         <hr/>
