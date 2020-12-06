@@ -26,6 +26,7 @@ export default class Home extends React.Component<IPage> {
         <div>
             <h3>Environment variable</h3>
             <p>process.env.ENVIRONMENT={process.env.ENVIRONMENT}</p>
+            <p>process.env.BASEPATH={process.env.BASEPATH}</p>
             <p>process.env.GREETING={process.env.GREETING}</p>
         </div>
       </React.Fragment>
