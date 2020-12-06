@@ -8,12 +8,13 @@ import ErrorPage from "./pages/ErrorPage";
 export default class App extends React.Component<{}> {
     public render() {
         const url = window.location.href;
+        const basepath = process.env.BASEPATH;
         console.log("url", url);
 
         const routes = [
-            { path: '/', action: () => <Home label={"home"} /> },
-            { path: '/about', action: () => <About label={"about"} /> },
-            { path: '/contacts', action: () => <Contacts label={"contacts"} /> }
+            { path: basepath + '/', action: () => <Home label={"home"} /> },
+            { path: basepath + '/about', action: () => <About label={"about"} /> },
+            { path: basepath + '/contacts', action: () => <Contacts label={"contacts"} /> }
         ];
 
         const route = routes.find(r => url.endsWith(r.path));
