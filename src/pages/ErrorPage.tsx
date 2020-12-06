@@ -1,20 +1,21 @@
 import * as React from "react";
 
 import IPage from "./IPage";
-import {Link, useLocation} from 'react-router-dom';
 
-const ErrorPage: React.FunctionComponent<IPage> = ({ label }) => {
+interface IError extends IPage {
+    location: string
+}
 
-    const location = useLocation();
+const ErrorPage: React.FunctionComponent<IError> = ({ label, location }) => {
 
     return (
         <React.Fragment>
             <h1>Error: {label}</h1>
-            <h3>{location.pathname} not found</h3>
+            <h3>{location} not found</h3>
             <div>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <a href="/">Home</a>
                     </li>
                 </ul>
             </div>

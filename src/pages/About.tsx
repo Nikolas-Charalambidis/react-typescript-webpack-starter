@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import IPage from "./IPage";
-import {Link} from 'react-router-dom';
 
 const About: React.FunctionComponent<IPage> = ({ label }) => {
   return (
@@ -10,7 +9,7 @@ const About: React.FunctionComponent<IPage> = ({ label }) => {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <a href="/">Home</a>
           </li>
         </ul>
       </div>

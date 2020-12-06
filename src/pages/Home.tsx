@@ -1,9 +1,8 @@
 import * as React from "react";
 
 import IPage from "./IPage";
-import {Link} from 'react-router-dom';
 
-export default class About extends React.Component<IPage> {
+export default class Home extends React.Component<IPage> {
   public render() {
     return (
       <React.Fragment>
@@ -12,20 +11,23 @@ export default class About extends React.Component<IPage> {
           <div>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <a href="/">Home</a>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <a href="/about">About</a>
               </li>
               <li>
-                <Link to="/dashboard">Dashboard</Link>
+                <a href="/contacts">Contacts</a>
               </li>
             </ul>
           </div>
         </div>
         <hr/>
-        <h3>Environment variable</h3>
-          <p>process.env.BASENAME={process.env.BASENAME}</p>
+        <div>
+            <h3>Environment variable</h3>
+            <p>process.env.ENVIRONMENT={process.env.ENVIRONMENT}</p>
+            <p>process.env.GREETING={process.env.GREETING}</p>
+        </div>
       </React.Fragment>
     );
   }
